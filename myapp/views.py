@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-   
+
+def index(request):
+    return render(request,'index.html', {})
 def pylinkweb(request):
 	return HttpResponse("Django讓python能方便連結網頁")
 def deposits(request):
@@ -11,4 +13,6 @@ def result(request):
 	n=int(request.GET['period'])
 	fv=str((pv*((1+i)**n)))
 	return HttpResponse(fv)
+
+
     
