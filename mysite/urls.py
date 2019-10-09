@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.urls import path
-
 from django.contrib import admin
 from myapp import views
+
 urlpatterns = [
     path('',views.index),
 	path('admin/', admin.site.urls),
@@ -25,5 +25,13 @@ urlpatterns = [
     path('fv/', views.deposits),
     path('result/', views.result),
 
+    path('company/',views.company),
+    path('company/insert/',views.insert),
+    path('do_insert/',views.do_insert),
+    path('company/detail/<int:stockid>/',views.detail),
+    path('company/update/<int:stockid>/',views.update),
+    path('do_update/',views.do_update),
+    path('company/delete/<int:stockid>/',views.delete),
+    path('do_delete/',views.do_delete),
 
 ]
