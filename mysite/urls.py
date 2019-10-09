@@ -21,9 +21,7 @@ from myapp import views
 urlpatterns = [
     path('',views.index),
 	path('admin/', admin.site.urls),
-    path('gogo/', views.pylinkweb),
-    path('fv/', views.deposits),
-    path('result/', views.result),
+
 
 
 ]
